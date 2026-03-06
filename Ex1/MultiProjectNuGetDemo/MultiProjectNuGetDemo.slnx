@@ -2,4 +2,6 @@
   <Project Path="MyApp/MyApp.csproj" />
   <Project Path="MyLibrary/MyLibrary.csproj" />
   <Project Path="MyServices/MyServices.csproj" Id="4c2dc2f8-7522-4155-8bde-3a3fc36cb18c" />
+  <Project Path="MyBusiness/MyBusiness.csproj" />
+  <Project Path="MyDataAccess/MyDataAccess.csproj" />
 </Solution>

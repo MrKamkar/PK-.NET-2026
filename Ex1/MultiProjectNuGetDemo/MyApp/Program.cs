@@ -5,6 +5,8 @@ using Newtonsoft.Json;
 
 using Microsoft.Extensions.DependencyInjection;
 using MyServices;
+using MyBusiness;
+using MyDataAccess;
 
 class Program
 {
@@ -28,14 +30,26 @@ class Program
         // Konfiguracja kontenera DI
         var serviceProvider = new ServiceCollection()
             .AddSingleton<ILoggerService, ConsoleLogger>()
+            .AddSingleton<Repository<Order>>()
+            .AddSingleton<OrderService>()
             .BuildServiceProvider();
 
         // Uzyskanie instancji loggera
         var logger = serviceProvider.GetService<ILoggerService>();
-        logger.Log("Aplikacja uruchomiona.");
+        logger!.Log("Aplikacja uruchomiona.");
 
         // Przykładowe użycie kalkulatora
         sum = Calculator.Add(10, 15);
         logger.Log($"Wynik dodawania: {sum}");
+
+        // Użycie OrderService z MyBusiness
+        var orderService = serviceProvider.GetService<OrderService>();
+        var order = new Order
+        {
+            OrderId = 1,
+            CustomerName = "Jan Kowalski",
+            OrderDate = DateTime.Now
+        };
+        orderService!.ProcessOrder(order);
     }
 }
