@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="VehicleReservationSystem/VehicleReservationSystem.csproj" />
+  <Project Path="VehicleReservationSystemTests/VehicleReservationSystemTests.csproj" />
+</Solution>
