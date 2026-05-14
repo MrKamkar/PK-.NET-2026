@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MCPWeatherServer\MCPWeatherServer.csproj" />
+  <Project Path="McpServer1Test\McpServer1Test.csproj" />
+  <Project Path="WeatherInformation\WeatherInformation.csproj" />
+</Solution>

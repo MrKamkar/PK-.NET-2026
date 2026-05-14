@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "weather-mcp": {
+      "type": "stdio",
+      "command": "c:\\Users\\kamil\\Documents\\PK-.NET-2026\\Ex10\\MCPWeatherServer\\bin\\Debug\\net10.0\\MCPWeatherServer.exe",
+      "args": []
+    }
+  }
+}
