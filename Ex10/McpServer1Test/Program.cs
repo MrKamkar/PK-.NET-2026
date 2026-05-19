@@ -2,7 +2,7 @@ namespace McpServer1Test;
 
 internal class Program
 {
-    private const string ServerPath = @"c:\Users\kamil\Documents\PK-.NET-2026\Ex10\MCPWeatherServer\bin\Debug\net10.0\MCPWeatherServer.exe";
+    private const string ServerPath = @"d:\Java Projects\PK-.NET-2026\Ex10\MCPWeatherServer\bin\Debug\net10.0\win-x64\MCPWeatherServer.exe";
 
     static async Task Main()
     {
@@ -25,7 +25,7 @@ internal class Program
             method = "tools/call",
             @params = new
             {
-                name = "GetTemperature",
+                name = "get_temperature",
                 arguments = new
                 {
                     location = "Warsaw",

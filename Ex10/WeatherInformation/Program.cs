@@ -78,6 +78,7 @@ while (true)
             messages.Add(new JsonObject
             {
                 ["role"] = "tool",
+                ["tool_call_id"] = toolCall["id"]?.GetValue<string>(),
                 ["tool_name"] = toolName,
                 ["content"] = toolText
             });

@@ -65,12 +65,21 @@ internal sealed class McpStdioClient : IAsyncDisposable
         if (_process is null)
             return;
 
-        if (!_process.HasExited)
+        try
         {
-            _process.Kill();
-            await _process.WaitForExitAsync();
+            if (!_process.HasExited)
+            {
+                _process.Kill();
+                await _process.WaitForExitAsync();
+            }
         }
-
-        _process.Dispose();
+        catch (InvalidOperationException)
+        {
+            // Process was never successfully started
+        }
+        finally
+        {
+            _process.Dispose();
+        }
     }
 }

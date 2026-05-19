@@ -2,7 +2,7 @@
   "servers": {
     "weather-mcp": {
       "type": "stdio",
-      "command": "c:\\Users\\kamil\\Documents\\PK-.NET-2026\\Ex10\\MCPWeatherServer\\bin\\Debug\\net10.0\\MCPWeatherServer.exe",
+      "command": "d:\\Java Projects\\PK-.NET-2026\\Ex10\\MCPWeatherServer\\bin\\Debug\\net10.0\\win-x64\\MCPWeatherServer.exe",
       "args": []
     }
   }
